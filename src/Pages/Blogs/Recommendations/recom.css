@@ -1,43 +1,28 @@
 .recommendations-container {
-    background-color: var(--color-beige-light);
-    min-height: 100vh;
-  }
-  
-  .recommendation-card {
-    background-color: white;
-    border: 1px solid var(--color-gray);
-    transition: transform 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .recommendation-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .recommendation-title {
-    color: var(--color-purple);
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .book-item {
-    color: var(--color-brown);
-    border: none;
-    padding: 0.5rem 0;
-    transition: background-color 0.3s ease;
-  }
-  
-  .book-item:hover {
-    background-color: var(--color-beige-light);
-  }
-  
-  .card-img-top {
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  @media (max-width: 768px) {
-    .card-img-top {
-      height: 180px;
-    }
-  }
+  background-color: var(--color-beige);
+}
+
+.recommendation-card {
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recommendation-card:hover {
+  transform: translateY(-5px);
+}
+
+.recommendation-title {
+  font-size: 1.4rem;
+  color: var(--color-purple);
+  margin-bottom: 1rem;
+}
+
+.book-item {
+  transition: background-color 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.book-item:hover {
+  background-color: var(--color-beige);
+  border-left-color: var(--color-purple);
+}

@@ -1,10 +1,15 @@
 import React from 'react';
 import { Card, Container } from 'react-bootstrap';
-// If you plan to use BookCarousel later, keep this import ready
-// import BookCarousel from '../Carousel/BookCarousel';
+import { useNavigate } from 'react-router-dom';
 import './Hero.css';
 
 function HeroSection() {
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate('/blogs/reviews');
+  };
+
   return (
     <Container fluid className="p-0">
       <Card className="border-0 hero-card">
@@ -17,13 +22,10 @@ function HeroSection() {
                 Whether you're searching for an stories, 
                 sci-fi or epic fantasies... You're in the right place. Better run.
               </p> 
-              <button className="custom-btn">GO TO THE BLOG</button>
+              <button className="custom-btn" onClick={handleNavigate}>GO TO THE BLOG</button>
             </Card.Body>
           </div>
           <div className="col-md-6">
-            {/* This div is currently empty. You might want to add content or remove it if not needed */}
-            {/* If you plan to add the carousel later, you would put it here: */}
-            {/* <BookCarousel /> */}
           </div>
         </div>
       </Card>
