@@ -25,7 +25,7 @@ A CMS-based blog for book reviews, recommendations, and miscellaneous bookish co
 - **Backend:** Express, Node.js, MongoDB
 - **Auth:** JWT, bcrypt
 - **Dev Tools:** Vite, ESLint, Babel
-- &DataBase/Backend:** MongoDB
+- **DataBase/Backend:** MongoDB
 
 ## Installation
 
@@ -82,11 +82,11 @@ src/
 └── posts          # Post management
 ```
 
-## 📄 License
+## License
 
 MIT
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create feature branch (`git checkout -b feature/name`)
