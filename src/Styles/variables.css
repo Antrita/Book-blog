@@ -1,0 +1,159 @@
+/* shared/variables.css - Create this file to store color variables */
+:root {
+  /* Primary colors from the palette */
+  --color-black: #030303;
+  --color-brown: #8d6a48;
+  --color-purple: #615160;
+  --color-beige: #d9c6ba;
+  --color-gray: #d1d1d1;
+
+  /* Additional variations for hover states and overlays */
+  --color-brown-light: #a17b57;
+  --color-purple-light: #726271;
+  --color-beige-light: #e5d6cc;
+  
+  /* Text colors */
+  --text-primary: var(--color-black);
+  --text-secondary: var(--color-purple);
+  --text-light: var(--color-beige);
+}
+
+/* components/Navbar/Navbar.css */
+.custom-navbar {
+  background-color: var(--color-beige);
+  box-shadow: 0 2px 4px rgba(3, 3, 3, 0.1);
+}
+
+.nav-link {
+  color: var(--color-purple) !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-brown) !important;
+}
+
+.dropdown-menu {
+  background-color: var(--color-beige);
+  border: 1px solid var(--color-gray);
+}
+
+.dropdown-item:hover {
+  background-color: var(--color-beige-light);
+  color: var(--color-purple);
+}
+
+/* components/HeroSection/HeroSection.css */
+.hero-section {
+  background-color: var(--color-beige-light);
+  color: var(--text-primary);
+}
+
+.script-font {
+  color: var(--color-brown);
+}
+
+.serif-font {
+  color: var(--color-black);
+}
+
+.btn-primary {
+  background-color: var(--color-purple);
+  border-color: var(--color-purple);
+  color: var(--color-beige);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-purple-light);
+  border-color: var(--color-purple-light);
+}
+
+/* pages/Blogs/BlogLayout.css */
+.blog-layout {
+  background-color: var(--color-beige-light);
+}
+
+.blog-content {
+  background-color: white;
+  border: 1px solid var(--color-gray);
+}
+
+.blog-title {
+  color: var(--color-purple);
+  border-bottom: 2px solid var(--color-brown);
+}
+
+/* pages/Blogs/Reviews/Reviews.css */
+.review-card {
+  background-color: white;
+  border: 1px solid var(--color-gray);
+}
+
+.review-title {
+  color: var(--color-purple);
+}
+
+.review-meta {
+  color: var(--color-brown);
+}
+
+.rating-stars {
+  color: var(--color-brown);
+}
+
+/* pages/Contact/Contact.css */
+.contact-container {
+  background-color: var(--color-beige-light);
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid var(--color-gray);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--color-purple);
+  box-shadow: 0 0 0 0.2rem rgba(97, 81, 96, 0.25);
+}
+
+/* components/Carousel/BookCarousel.css */
+.carousel {
+  background-color: var(--color-black);
+}
+
+.carousel-caption {
+  background-color: rgba(3, 3, 3, 0.7);
+  color: var(--color-beige);
+}
+
+.carousel-indicators button {
+  background-color: var(--color-beige);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--color-purple);
+}
+.blog-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .blog-content {
+    padding: 1rem 0.5rem;
+  }
+  
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+}

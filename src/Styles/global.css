@@ -1,0 +1,94 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+}
+/* src/styles/global.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.container, 
+.container-fluid {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 1rem !important;
+  margin: 0 !important;
+}
+
+.row {
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.col, [class*="col-"] {
+  padding: 0.5rem !important;
+}
+
+.card {
+  margin: 0.5rem 0;
+  width: 100%;
+}
+/* Add to all component CSS files */
+.blog-content,
+.reviews-container,
+.recommendations-container,
+.contact-container,
+.misc-container,
+.hero-section {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.navbar {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem;
+  }
+}

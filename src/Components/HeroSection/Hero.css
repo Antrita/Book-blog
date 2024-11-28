@@ -1,0 +1,44 @@
+/* Hero.css */
+.hero-card {
+  background-color: var(--color-beige);
+  min-height: 600px;
+}
+
+.hero-content {
+  padding: 4rem !important;
+}
+
+.script-font {
+  font-family: var(--font-script);
+  color: var(--color-brown);
+  font-size: 2.5rem;
+}
+
+.serif-font {
+  font-family: var(--font-serif);
+  color: var(--color-purple);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.sans-serif-font {
+  font-family: var(--font-sans);
+  color: var(--color-black);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.custom-btn {
+  background-color: var(--color-purple);
+  color: var(--color-beige);
+  border: none;
+  padding: 12px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: var(--font-sans);
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: var(--color-brown);
+}

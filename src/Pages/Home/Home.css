@@ -1,0 +1,8 @@
+.home-container {
+  min-height: 100vh;
+  background-color: var(--color-beige);
+}
+
+main {
+  margin-top: 0;
+}

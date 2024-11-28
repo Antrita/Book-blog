@@ -1,0 +1,106 @@
+/* src/pages/Blogs/Top10/TopBooks.css */
+.top-books-container {
+    background-color: var(--color-beige-light);
+  }
+  
+  .book-card {
+    transition: transform 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .book-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Image wrapper for hover effect */
+  .card-img-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .book-cover {
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Overlay styling */
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(97, 81, 96, 0.8); /* Using our purple with opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .card-img-wrapper:hover .card-overlay {
+    opacity: 1;
+  }
+  
+  .card-img-wrapper:hover .book-cover {
+    transform: scale(1.05);
+  }
+  
+  /* Button styling */
+  .read-more-btn {
+    background-color: var(--color-beige);
+    color: var(--color-purple);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-family: var(--font-sans);
+    transition: all 0.3s ease;
+  }
+  
+  .read-more-btn:hover {
+    background-color: var(--color-brown);
+    color: var(--color-beige);
+  }
+  
+  /* Card content styling */
+  .book-title {
+    color: var(--color-purple);
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+  }
+  
+  .book-description {
+    color: var(--color-black);
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  /* Rating stars styling */
+  .book-rating {
+    margin: 10px 0;
+  }
+  
+  .stars {
+    color: var(--color-brown);
+    margin-right: 10px;
+  }
+  
+  .rating-number {
+    color: var(--color-purple);
+    font-weight: 500;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .book-cover {
+      height: 300px;
+    }
+    
+    .book-title {
+      font-size: 1.1rem;
+    }
+  }
