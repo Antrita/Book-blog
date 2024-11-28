@@ -1,4 +1,5 @@
 # Book Blog CMS
+### A work in Progress
 
 A CMS-based blog for book reviews, recommendations, and miscellaneous bookish content. Built with React, Node.js, and MongoDB.
 
