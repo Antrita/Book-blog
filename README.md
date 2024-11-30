@@ -67,29 +67,6 @@ src/
     └── ProtectedRoute.jsx  # Auth protection
 ```
 
-## Routes
 
-```
-/                   # Home
-/blogs/
-├── reviews         # Book reviews
-├── top10          # Top book lists
-├── recommendations # Reading recommendations
-└── miscellaneous  # Other content
-/admin/
-├── login          # Admin login
-├── editor         # Post editor
-└── posts          # Post management
-```
 
-## License
 
-MIT
-
-## Contributing
-
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/name`)
-3. Commit changes (`git commit -am 'Add feature'`)
-4. Push branch (`git push origin feature/name`)
-5. Open Pull Request
