@@ -15,14 +15,14 @@ export const AuthProvider = ({ children }) => {
   const checkAuth = async () => {
     try {
       await api.get('/admin/check-auth');
-      setIsAuthenticated(true);
-    } catch (error) {
-      setIsAuthenticated(false);
-    } finally {
-      setLoading(false);
-    }
-  };
-
+    setIsAuthenticated(true);
+  } catch (error) {
+    console.error('Auth check error:', error);
+    setIsAuthenticated(false);
+  } finally {
+    setLoading(false);
+  }
+};
   const login = async (credentials) => {
     try {
       await api.post('/admin/login', credentials);

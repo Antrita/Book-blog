@@ -12,23 +12,27 @@ import Contact from '../Pages/Contacts/Contact';
 import BlogEditor from '../Pages/admin/BlogEditor';
 import AdminLogin from '../Pages/admin/AdminLogin';
 import BlogList from '../Pages/admin/BlogList';
-import AdminLayout from '../Pages/admin/AdminLayout'; 
+import AdminLayout from '../Pages/admin/AdminLayout';
+import CMSAdminDashboard from '../Pages/admin/cms/CMSAdminDashboard';
+import ComponentEditor from '../Pages/admin/cms/ComponentEditor';
+//import ThemeEditor from '../Pages/admin/cms/ThemeEditor';
+import LayoutManager from '../Pages/admin/cms/LayoutManager';
 import ProtectedRoute from '../utils/ProtectedRoute';
 import { useAuth } from '../contexts/AuthContext';
+import AdminSettings from '../Pages/admin/AdminSettings';
 
 function AppRoutes() {
   const { isAuthenticated, loading } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Redirect unauthenticated users trying to access admin routes
     if (!loading && !isAuthenticated && window.location.pathname.startsWith('/admin/')) {
       navigate('/admin');
     }
   }, [isAuthenticated, loading, navigate]);
 
   if (loading) {
-    return <div>Loading...</div>; // Consider using a proper loading component
+    return <div>Loading...</div>;
   }
 
   return (
@@ -70,10 +74,22 @@ function AppRoutes() {
               </ProtectedRoute>
             }
           >
-            <Route path="dashboard" element={<BlogList />} />
-            <Route path="posts" element={<BlogList />} />
+            {/* Existing Admin Routes */}
+            <Route path="dashboard" element={<BlogList category="all" title="Dashboard" />} />
+            <Route path="posts" element={<BlogList category="all" title="All Posts" />} />
             <Route path="editor" element={<BlogEditor />} />
             <Route path="editor/:id" element={<BlogEditor />} />
+
+            {/* New CMS Routes */}
+            <Route path="cms" element={<CMSAdminDashboard />}>
+              <Route index element={<ComponentEditor />} />
+              <Route path="components" element={<ComponentEditor />} />
+             
+              <Route path="layouts" element={<LayoutManager />} />
+            </Route>
+
+            {/* Settings Route */}
+            <Route path="settings" element={<AdminSettings />} />
           </Route>
         </Route>
 

@@ -13,13 +13,14 @@ function HeroSection() {
   // 3. Make API calls using useEffect
   useEffect(() => {
     const fetchFeaturedBooks = async () => {
-      try {
-        const data = await callApi(api.get, '/api/blogs/Reviews');
-        setFeaturedBooks(data.slice(0, 3)); // Get top 3 reviews
-      } catch (err) {
-        console.error('Error fetching featured books:', err);
-      }
-    };
+  try {
+    // Update the endpoint to match your server route
+    const data = await callApi(api.get, '/api/blogs/category/reviews');
+    setFeaturedBooks(data.slice(0, 3)); 
+  } catch (err) {
+    console.error('Error fetching featured books:', err);
+  }
+};
 
     fetchFeaturedBooks();
   }, [callApi]);

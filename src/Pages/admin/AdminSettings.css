@@ -1,0 +1,51 @@
+.admin-settings {
+    --color-black: var(--color-black);
+    --color-brown: var(--color-brown);
+    --color-purple: var(--color-purple);
+    --color-beige: var(--color-beige);
+    --color-gray: var(--color-gray);
+}
+
+.bg-beige {
+    background-color: var(--color-beige) !important;
+}
+
+.card {
+    border-color: var(--color-gray);
+}
+
+.card-header {
+    border-bottom-color: var(--color-gray);
+}
+
+.custom-btn {
+    background-color: var(--color-purple);
+    border-color: var(--color-purple);
+    color: var(--color-beige);
+}
+
+.custom-btn:hover {
+    background-color: var(--color-purple-light);
+    border-color: var(--color-purple-light);
+}
+
+.typography-preview {
+    background-color: var(--color-beige-light);
+}
+
+.color-preview {
+    border-radius: 4px;
+}
+
+/* Font Classes */
+.serif-font {
+    font-family: var(--serif-font);
+}
+
+.sans-serif-font {
+    font-family: var(--sans-serif-font);
+}
+
+.script-font {
+    font-family: var(--script-font);
+}

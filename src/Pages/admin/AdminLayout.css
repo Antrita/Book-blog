@@ -1,124 +1,126 @@
-
 .admin-layout {
-    display: flex;
-    min-height: 100vh;
-    background-color: var(--color-beige-light);
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 260px;
+  background-color: #1a1a1a;
+  color: #fff;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+.sidebar-header {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brand {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.sidebar.collapsed .brand {
+  display: none;
+}
+
+.toggle-btn {
+  color: #fff;
+  padding: 0;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 1rem 0;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+  color: #fff;
+  background-color: var(--bs-primary);
+}
+
+.nav-link svg {
+  margin-right: 1rem;
+}
+
+.sidebar.collapsed .nav-label {
+  display: none;
+}
+
+.sidebar-footer {
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logout-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.sidebar.collapsed .logout-btn span {
+  display: none;
+}
+
+.main-content {
+  flex: 1;
+  background-color: #f8f9fa;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.content-wrapper {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    transform: translateX(-100%);
   }
-  
-  .admin-nav {
-    width: 250px;
-    background-color: var(--color-beige);
-    padding: 2rem;
-    border-right: 1px solid var(--color-gray);
-    box-shadow: 2px 0 4px rgba(3, 3, 3, 0.1);
+
+  .sidebar.collapsed {
+    transform: translateX(0);
+    width: 260px;
   }
-  
-  .admin-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+
+  .main-content {
+    margin-left: 0;
   }
-  
-  .admin-nav li {
-    margin-bottom: 1rem;
+
+  .content-wrapper {
+    padding: 1rem;
   }
-  
-  .admin-nav a {
-    display: block;
-    padding: 0.75rem 1rem;
-    color: var(--color-purple);
-    text-decoration: none;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    font-weight: 500;
-  }
-  
-  .admin-nav a:hover {
-    background-color: var(--color-beige-light);
-    color: var(--color-brown);
-  }
-  
-  .admin-nav a.active {
-    background-color: var(--color-purple);
-    color: var(--color-beige);
-  }
-  
-  .admin-content {
-    flex: 1;
-    padding: 2rem;
-    background-color: white;
-    margin: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(3, 3, 3, 0.1);
-  }
-  
-  .admin-nav button {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    margin-top: 2rem;
-    border: none;
-    background-color: var(--color-brown);
-    color: var(--color-beige);
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-weight: 500;
-  }
-  
-  .admin-nav button:hover {
-    background-color: var(--color-brown-light);
-  }
-  
-  /* Admin header styles */
-  .admin-header {
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid var(--color-gray);
-  }
-  
-  .admin-header h1 {
-    color: var(--color-purple);
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
-  
-  .admin-header p {
-    color: var(--color-brown);
-    margin: 0;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .admin-layout {
-      flex-direction: column;
-    }
-  
-    .admin-nav {
-      width: 100%;
-      padding: 1rem;
-    }
-  
-    .admin-content {
-      margin: 0;
-      border-radius: 0;
-    }
-  
-    .admin-nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-  
-    .admin-nav li {
-      margin-bottom: 0;
-      flex: 1 1 auto;
-    }
-  
-    .admin-nav a {
-      text-align: center;
-    }
-  
-    .admin-nav button {
-      margin-top: 1rem;
-    }
-  }
+}
