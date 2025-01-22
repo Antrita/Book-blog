@@ -27,27 +27,6 @@ A CMS-based blog for book reviews, recommendations, and miscellaneous bookish co
 - **Dev Tools:** Vite, ESLint, Babel
 - **DataBase/Backend:** MongoDB
 
-## Installation
-
-```bash
-# Clone repository
-git clone https://github.com/Antrita/book-blog.git
-cd book-blog
-
-# Install dependencies
-npm install
-
-# Configure environment
-cp .env.example .env
-# Edit .env with your credentials
-
-# Development
-npm run dev
-
-# Production build
-npm run build
-```
-
 ## Project Structure
 
 ```
